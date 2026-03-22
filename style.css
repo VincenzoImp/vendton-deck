@@ -48,12 +48,13 @@
 /* ---- LAYOUTS ---- */
 .content-slide {
   text-align: center;
-  padding: 50px 70px;
+  padding: 40px 80px;
   display: flex !important;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
+  gap: 8px;
 }
 
 .slide-label {
@@ -69,7 +70,7 @@
   margin-bottom: 12px;
 }
 
-.subtitle { font-size: 0.85em; color: var(--t2); max-width: 750px; margin: -4px auto 24px; }
+.subtitle { font-size: 0.9em; color: var(--t2); max-width: 850px; margin: -4px auto 28px; }
 .sep { margin: 0 10px; opacity: 0.35; }
 
 /* ============ COVER ============ */
@@ -114,7 +115,7 @@
 }
 .narrative-icon-wrap { width: 32px; height: 32px; flex-shrink: 0; margin-top: 2px; }
 .narrative-icon-wrap svg { width: 32px; height: 32px; }
-.narrative-card p { font-size: 0.72em; color: var(--t2); line-height: 1.6; }
+.narrative-card p { font-size: 0.78em; color: var(--t2); line-height: 1.6; }
 
 /* ============ OPPORTUNITY ============ */
 .stats-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-bottom: 24px; width: 100%; max-width: 1100px; }
@@ -128,17 +129,17 @@
 .convergence-svg { width: 100%; }
 
 /* ============ SOLUTION PILLARS ============ */
-.pillars { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; width: 100%; max-width: 1200px; }
-.pillar { background: var(--card); border-radius: 16px; padding: 28px 20px; text-align: center; border: 1px solid var(--card-border); transition: transform .3s, border-color .3s; }
+.pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; width: 100%; max-width: 1300px; }
+.pillar { background: var(--card); border-radius: 16px; padding: 32px 24px; text-align: center; border: 1px solid var(--card-border); transition: transform .3s, border-color .3s; flex: 1; }
 .pillar:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.15); }
-.pillar-icon { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; }
-.pillar-icon svg { width: 32px; height: 32px; }
+.pillar-icon { width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+.pillar-icon svg { width: 34px; height: 34px; }
 .pillar-icon.blue { background: rgba(51,144,236,0.12); }
 .pillar-icon.purple { background: rgba(139,92,246,0.12); }
 .pillar-icon.green { background: rgba(16,185,129,0.12); }
 .pillar-icon.cyan { background: rgba(6,182,212,0.12); }
-.pillar h3 { font-size: 0.85em; margin-bottom: 6px; }
-.pillar p { font-size: 0.62em; color: var(--t2); line-height: 1.45; }
+.pillar h3 { font-size: 0.95em; margin-bottom: 8px; }
+.pillar p { font-size: 0.7em; color: var(--t2); line-height: 1.5; }
 
 /* ============ FLOW DIAGRAM ============ */
 .flow-wrap { max-width: 1050px; width: 100%; }
@@ -220,12 +221,12 @@
 .ph-deploy-btn { background: linear-gradient(135deg,var(--blue),var(--purple)); border-radius: 8px; padding: 8px; text-align: center; font-size: 12px; font-weight: 700; margin-top: 8px; }
 
 /* ============ ALPHATON ============ */
-.alpha-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-bottom: 24px; width: 100%; max-width: 1200px; }
-.alpha-card { background: var(--card); border-radius: 16px; padding: 28px 24px; text-align: left; border: 1px solid var(--card-border); }
+.alpha-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; margin-bottom: 24px; width: 100%; max-width: 1300px; }
+.alpha-card { background: var(--card); border-radius: 16px; padding: 36px 28px; text-align: left; border: 1px solid var(--card-border); }
 .alpha-icon { width: 42px; height: 42px; margin-bottom: 14px; }
 .alpha-icon svg { width: 42px; height: 42px; }
-.alpha-card h3 { font-size: 0.88em; margin-bottom: 8px; }
-.alpha-card p { font-size: 0.62em; color: var(--t2); line-height: 1.5; }
+.alpha-card h3 { font-size: 1em; margin-bottom: 10px; }
+.alpha-card p { font-size: 0.72em; color: var(--t2); line-height: 1.55; }
 
 .alpha-quote { max-width: 1000px; width: 100%; }
 .alpha-quote blockquote {
