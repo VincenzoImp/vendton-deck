@@ -1,0 +1,9 @@
+{
+  "name": "vendton-deck",
+  "version": "1.0.0",
+  "description": "VendTON Pitch Deck — BSA EPFL Hackathon 2026",
+  "scripts": {
+    "dev": "npx serve .",
+    "open": "open index.html"
+  }
+}

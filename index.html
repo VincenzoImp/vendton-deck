@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VendTON — Community-Driven Marketplace for Paid APIs on TON</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="reveal">
+<div class="slides">
+
+<!-- ============================================================ -->
+<!-- SLIDE 1: COVER -->
+<!-- ============================================================ -->
+<section data-background-color="#0a0e1a">
+  <div class="cover-slide">
+    <div class="cover-logo-container">
+      <svg class="cover-logo" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#3390EC"/>
+            <stop offset="50%" style="stop-color:#8B5CF6"/>
+            <stop offset="100%" style="stop-color:#06B6D4"/>
+          </linearGradient>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+        <circle cx="60" cy="60" r="55" fill="none" stroke="url(#logoGrad)" stroke-width="3" filter="url(#glow)"/>
+        <path d="M35 45 L60 30 L85 45 L85 75 L60 90 L35 75 Z" fill="none" stroke="url(#logoGrad)" stroke-width="2.5" stroke-linejoin="round"/>
+        <circle cx="60" cy="60" r="12" fill="url(#logoGrad)" opacity="0.9"/>
+        <path d="M55 57 L58 63 L66 55" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <h1 class="cover-title">Vend<span class="accent">TON</span></h1>
+    <p class="cover-subtitle">The community-driven marketplace for paid APIs on TON.</p>
+    <div class="cover-tagline">
+      <span class="tag-pill">x402 Protocol</span>
+      <span class="tag-pill purple">ENS Identity</span>
+      <span class="tag-pill green">USDT on TON</span>
+    </div>
+    <div class="cover-footer">
+      <span>BSA EPFL Hackathon 2026</span>
+      <span class="sep">|</span>
+      <span>AlphaTON Capital Track</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 2: THE PROBLEM -->
+<!-- ============================================================ -->
+<section data-background-color="#0a0e1a">
+  <div class="content-slide">
+    <div class="slide-label">THE PROBLEM</div>
+    <h2>AI Needs Data. Data Costs Money.<br><span class="accent">There's No Way to Pay.</span></h2>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-icon blue">
+          <svg viewBox="0 0 28 28" fill="none"><path d="M14 3l9 5.2v11.6l-9 5.2-9-5.2V8.2l9-5.2z" stroke="#3390EC" stroke-width="1.5"/><circle cx="14" cy="14" r="3.5" fill="#3390EC"/></svg>
+        </div>
+        <h3>Developers</h3>
+        <p>Build APIs but can't monetize them without complex billing infrastructure</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon purple">
+          <svg viewBox="0 0 28 28" fill="none"><rect x="3" y="7" width="22" height="14" rx="2" stroke="#8B5CF6" stroke-width="1.5"/><path d="M9 14h4m3 0h3" stroke="#8B5CF6" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>AI Agents</h3>
+        <p>Need real-world data but can't pay for it autonomously on TON</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon green">
+          <svg viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="9" stroke="#10B981" stroke-width="1.5"/><path d="M10 14l3 3 5-5.5" stroke="#10B981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Users</h3>
+        <p>Want AI assistants but don't control what they spend or how</p>
+      </div>
+    </div>
+    <div class="narrative-card">
+      <p>Stripe and Visa don't work for autonomous agents. x402 exists on Ethereum and Solana — but <strong>not on TON</strong>, the blockchain with Telegram's massive user base. <strong>We built it.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 3: THE VISION -->
+<!-- ============================================================ -->
+<section data-background-color="#0a0e1a">
+  <div class="content-slide">
+    <div class="slide-label">THE VISION</div>
+    <h2>Everyone <span class="accent">Wins</span></h2>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-icon green">
+          <svg viewBox="0 0 28 28" fill="none"><path d="M14 3v22M7 10l7-7 7 7M7 18l7 7 7-7" stroke="#10B981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Developers Earn</h3>
+        <p>Deploy an API, set a price, earn USDT per call. No infrastructure. Your DVM gets an ENS identity on-chain.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon blue">
+          <svg viewBox="0 0 28 28" fill="none"><path d="M7 21V12l7-5 7 5v9" stroke="#3390EC" stroke-width="1.5" stroke-linejoin="round"/><rect x="11" y="16" width="6" height="5" stroke="#3390EC" stroke-width="1.2"/></svg>
+        </div>
+        <h3>Telegram Gets an Economy</h3>
+        <p>A community-driven marketplace of paid APIs inside Telegram. Users build for users. Powered by TON.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon purple">
+          <svg viewBox="0 0 28 28" fill="none"><rect x="3" y="7" width="22" height="14" rx="2" stroke="#8B5CF6" stroke-width="1.5"/><path d="M9 14h4m3 0h3" stroke="#8B5CF6" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Agents Pay for Data</h3>
+        <p>Any agent with a TON wallet discovers DVMs, pays in USDT, gets real-world data. No API keys needed.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon cyan">
+          <svg viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="9" stroke="#06B6D4" stroke-width="1.5"/><path d="M10 14l3 3 5-5.5" stroke="#06B6D4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Users Control Their AI</h3>
+        <p>Connect your wallet, ask anything. The AI finds paid DVMs, asks for your approval, pays with your USDT.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 4: THE SOLUTION -->
+<!-- ============================================================ -->
+<section data-background-color="#0a0e1a">
+  <div class="content-slide">
+    <div class="slide-label">THE SOLUTION</div>
+    <h2>Vend<span class="accent">TON</span></h2>
+    <p class="subtitle">Vercel for paid API endpoints — on TON.</p>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-icon blue">
+          <svg viewBox="0 0 28 28" fill="none"><path d="M14 3l9 5.2v11.6l-9 5.2-9-5.2V8.2l9-5.2z" stroke="#3390EC" stroke-width="1.5"/><circle cx="14" cy="14" r="3.5" fill="#3390EC"/></svg>
+        </div>
+        <h3>Deploy in 30 Seconds</h3>
+        <p>Write code, upload a file, or paste a URL. Set a price. Your API is live and earning.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon purple">
+          <svg viewBox="0 0 28 28" fill="none"><rect x="3" y="7" width="22" height="14" rx="2" stroke="#8B5CF6" stroke-width="1.5"/><path d="M9 14h4m3 0h3" stroke="#8B5CF6" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>AI Discovers & Pays</h3>
+        <p>Agents search the marketplace, pay USDT via x402, chain multiple DVMs for complex tasks.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon green">
+          <svg viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="9" stroke="#10B981" stroke-width="1.5"/><path d="M10 14l3 3 5-5.5" stroke="#10B981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>ENS Identity On-Chain</h3>
+        <p>Every DVM gets a real ENS subdomain on Ethereum Sepolia with cross-chain TON address records.</p>
+      </div>
+    </div>
+    <div class="narrative-card">
+      <p>Built on <strong>x402</strong>, the HTTP payment protocol by Coinbase — ported to TON for the first time.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 5: THE PRODUCT -->
+<!-- ============================================================ -->
+<section data-background-color="#0a0e1a">
+  <div class="content-slide">
+    <div class="slide-label">THE PRODUCT</div>
+    <h2>Four Pages, One Mini App</h2>
+    <div class="phones-row">
+      <div class="phone-wrap">
+        <div class="phone">
+          <div class="ph-bar"><span>9:41</span><span>5G</span></div>
+          <div class="ph-header"><div class="ph-logo"></div><span>VendTON</span><div class="ph-btn">Connect</div></div>
+          <div class="ph-body">
+            <div class="ph-search">Search DVMs...</div>
+            <div class="ph-tags"><span class="ph-tag active">All</span><span class="ph-tag">weather</span><span class="ph-tag">crypto</span><span class="ph-tag">ai</span></div>
+            <div class="ph-card"><div class="ph-card-h"><span>Weather Data</span><span class="ph-price">0.10</span></div><div class="ph-card-d">Real-time weather data</div></div>
+            <div class="ph-card"><div class="ph-card-h"><span>Crypto Price</span><span class="ph-price">0.10</span></div><div class="ph-card-d">Live crypto prices</div></div>
+          </div>
+          <div class="ph-nav"><span class="ph-nav-active">Explore</span><span>Create</span><span>Ask</span><span>Profile</span></div>
+        </div>
+        <div class="phone-label">Explore DVMs</div>
+      </div>
+      <div class="phone-wrap">
+        <div class="phone">
+          <div class="ph-bar"><span>9:41</span><span>5G</span></div>
+          <div class="ph-header"><div class="ph-logo"></div><span>VendTON</span><div class="ph-btn connected">UQA6...l28u</div></div>
+          <div class="ph-body">
+            <div class="ph-title">Ask AI</div>
+            <div class="ph-bubble-user">Weather in Lausanne + Bitcoin price</div>
+            <div class="ph-steps">
+              <div class="ph-step"><span class="ph-step-dot blue"></span>Searching for "weather"...</div>
+              <div class="ph-step"><span class="ph-step-dot green"></span>Approve 0.10 USDT?</div>
+              <div class="ph-step"><span class="ph-step-dot blue"></span>Searching for "bitcoin"...</div>
+              <div class="ph-step"><span class="ph-step-dot green"></span>Approve 0.10 USDT?</div>
+            </div>
+            <div class="ph-bubble-agent">Lausanne: 8°C · BTC: $70,290</div>
+            <div class="ph-total">Paid: 0.20 USDT from your wallet</div>
+          </div>
+          <div class="ph-nav"><span>Explore</span><span>Create</span><span class="ph-nav-active">Ask</span><span>Profile</span></div>
+        </div>
+        <div class="phone-label">Your AI, Your Wallet</div>
+      </div>
+      <div class="phone-wrap">
+        <div class="phone">
+          <div class="ph-bar"><span>9:41</span><span>5G</span></div>
+          <div class="ph-header"><div class="ph-logo"></div><span>VendTON</span><div class="ph-btn connected">UQA6...l28u</div></div>
+          <div class="ph-body">
+            <div class="ph-title">Create a DVM</div>
+            <div class="ph-field"><label>Source</label><div class="ph-input" style="font-size:9px">Write Code · Upload · URL</div></div>
+            <div class="ph-field"><label>Code</label><div class="ph-code"><span class="c-kw">const</span> res = <span class="c-kw">await</span> <span class="c-fn">fetch</span>(...)<br><span class="c-kw">return</span> { data }</div></div>
+            <div class="ph-field"><label>Price</label><div class="ph-input">0.10 USDT / call</div></div>
+            <div class="ph-deploy-btn">Deploy · 0.05 TON</div>
+          </div>
+          <div class="ph-nav"><span>Explore</span><span class="ph-nav-active">Create</span><span>Ask</span><span>Profile</span></div>
+        </div>
+        <div class="phone-label">Deploy & Earn</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 6: PAYMENT FLOW -->
+<!-- ============================================================ -->
+<section data-background-color="#0a0e1a">
+  <div class="content-slide">
+    <div class="slide-label">PAYMENT</div>
+    <h2>Two Paths, One Protocol</h2>
+    <div class="pillars" style="gap:2rem">
+      <div class="pillar" style="flex:1">
+        <div class="pillar-icon blue">
+          <svg viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="9" stroke="#3390EC" stroke-width="1.5"/><path d="M10 14l3 3 5-5.5" stroke="#3390EC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Users Pay via TON Connect</h3>
+        <p>1. Ask AI a question<br>2. AI finds the right DVM<br>3. "Approve 0.10 USDT?" popup<br>4. Tap approve in your wallet<br>5. Get the answer</p>
+      </div>
+      <div class="pillar" style="flex:1">
+        <div class="pillar-icon purple">
+          <svg viewBox="0 0 28 28" fill="none"><rect x="3" y="7" width="22" height="14" rx="2" stroke="#8B5CF6" stroke-width="1.5"/><path d="M9 14h4m3 0h3" stroke="#8B5CF6" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Agents Pay via x402</h3>
+        <p>1. Call /dvm/:owner/:name<br>2. Receive HTTP 402<br>3. Sign USDT Jetton transfer<br>4. Gateway verifies on-chain<br>5. DVM executes</p>
+      </div>
+    </div>
+    <div class="narrative-card">
+      <p>Both paths settle in <strong>USDT on TON</strong>. Both are verifiable on-chain. The DVM owner earns regardless of who calls — human or machine.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 7: ENS -->
+<!-- ============================================================ -->
+<section data-background-color="#0a0e1a">
+  <div class="content-slide">
+    <div class="slide-label">IDENTITY</div>
+    <h2>Every DVM Lives <span class="accent">On-Chain</span></h2>
+    <div class="narrative-card" style="margin-top:2rem">
+      <div style="text-align:center;margin-bottom:1.5rem">
+        <code style="font-size:1.3rem;color:#8B5CF6;font-family:'JetBrains Mono',monospace">weather-data.uqa6ew1b.vendton.eth</code>
+      </div>
+      <p style="text-align:center;margin-bottom:1.5rem;opacity:0.7">Real ENS subdomain on Ethereum Sepolia with text records:</p>
+      <div style="display:flex;gap:2rem;justify-content:center">
+        <div style="text-align:center">
+          <div style="color:#3390EC;font-weight:700;font-size:0.9rem">address.ton</div>
+          <div style="color:#64748b;font-size:0.75rem;margin-top:0.3rem">Owner's TON wallet</div>
+        </div>
+        <div style="text-align:center">
+          <div style="color:#10B981;font-weight:700;font-size:0.9rem">description</div>
+          <div style="color:#64748b;font-size:0.75rem;margin-top:0.3rem">What the DVM does</div>
+        </div>
+      </div>
+    </div>
+    <p class="subtitle" style="margin-top:2rem;font-size:1.1rem">Identity on Ethereum. Payments on TON. Interface on Telegram.<br><strong>Three chains. One experience.</strong></p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 8: LIVE DEMO -->
+<!-- ============================================================ -->
+<section data-background-color="#0a0e1a">
+  <div class="content-slide">
+    <div class="slide-label">LIVE</div>
+    <h2>Everything is Real.<br><span class="accent">Everything is On-Chain.</span></h2>
+    <div class="status-grid" style="grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem">
+      <div class="status-item"><div class="s-check">🌐</div><div class="s-text"><strong>Mini App</strong><span>vendton.vercel.app</span></div></div>
+      <div class="status-item"><div class="s-check">🤖</div><div class="s-text"><strong>Telegram Bot</strong><span>@vendton_bot</span></div></div>
+      <div class="status-item"><div class="s-check">💰</div><div class="s-text"><strong>Agent Wallet</strong><span>TON Testnet Explorer</span></div></div>
+      <div class="status-item"><div class="s-check">👤</div><div class="s-text"><strong>DVM Providers</strong><span>TON Testnet Explorer</span></div></div>
+      <div class="status-item"><div class="s-check">🔗</div><div class="s-text"><strong>vendton.eth</strong><span>ENS Sepolia</span></div></div>
+      <div class="status-item"><div class="s-check">📦</div><div class="s-text"><strong>Source Code</strong><span>github.com/VincenzoImp/vendton</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 9: FOR ALPHATON -->
+<!-- ============================================================ -->
+<section data-background-color="#0a0e1a">
+  <div class="content-slide">
+    <div class="slide-label">FOR ALPHATON CAPITAL</div>
+    <h2>Your Agents Can Think.<br><span class="accent">Now They Can Pay.</span></h2>
+    <div class="alpha-grid">
+      <div class="alpha-card">
+        <h3>The Missing Layer</h3>
+        <p>Cocoon AI agents run on $82.5M of GPU infrastructure. They can reason. They can plan. But they <strong>cannot pay for external data</strong>. VendTON is the payment and marketplace layer they need.</p>
+      </div>
+      <div class="alpha-card">
+        <h3>First on TON</h3>
+        <p>x402 exists on Ethereum and Solana. <strong>Nobody has built it on TON</strong> — the blockchain with Telegram's massive user base. We're the first movers.</p>
+      </div>
+      <div class="alpha-card">
+        <h3>Community-Driven</h3>
+        <p>Anyone deploys a paid API. Anyone earns USDT. The marketplace grows with the community — <strong>more DVMs, more value, more usage</strong>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SLIDE 10: THANK YOU -->
+<!-- ============================================================ -->
+<section data-background-color="#0a0e1a">
+  <div class="cover-slide">
+    <h1 class="cover-title">Vend<span class="accent">TON</span></h1>
+    <p class="cover-subtitle">Anyone deploys. Agents pay. Users power their AI.</p>
+    <div class="cover-tagline" style="margin-top:2rem">
+      <span class="tag-pill">vendton.vercel.app</span>
+      <span class="tag-pill purple">@vendton_bot</span>
+      <span class="tag-pill green">github.com/VincenzoImp/vendton</span>
+    </div>
+    <div class="cover-footer" style="margin-top:3rem">
+      <span>Thank you</span>
+    </div>
+  </div>
+</section>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    transition: 'fade',
+    transitionSpeed: 'fast',
+    controls: true,
+    progress: true,
+    center: true,
+    width: 1920,
+    height: 1080,
+  });
+</script>
+</body>
+</html>
