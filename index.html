@@ -234,25 +234,35 @@
 <section data-background-color="#0a0e1a">
   <div class="content-slide">
     <div class="slide-label">PAYMENT</div>
-    <h2>Two Paths, One Protocol</h2>
-    <div class="pillars" style="gap:2rem">
-      <div class="pillar" style="flex:1">
+    <h2>One Flow. <span class="accent">Two Callers.</span></h2>
+    <div class="pillars" style="gap:2rem; grid-template-columns: 2fr 1fr 1fr;">
+      <div class="pillar" style="text-align:left">
+        <h3 style="font-size:1.1em">The x402 Flow</h3>
+        <p style="font-size:0.8em; line-height:2">
+          1. Call a DVM endpoint<br>
+          2. Gateway returns <strong>HTTP 402</strong><br>
+          3. Pay USDT on TON<br>
+          4. Gateway verifies → executes DVM<br>
+          5. Get the data
+        </p>
+      </div>
+      <div class="pillar">
         <div class="pillar-icon blue">
           <svg viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="9" stroke="#3390EC" stroke-width="1.5"/><path d="M10 14l3 3 5-5.5" stroke="#3390EC" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <h3>Users Pay via TON Connect</h3>
-        <p>1. Ask AI a question<br>2. AI finds the right DVM<br>3. "Approve 0.10 USDT?" popup<br>4. Tap approve in your wallet<br>5. Get the answer</p>
+        <h3>Users</h3>
+        <p>Approve in wallet via TON Connect</p>
       </div>
-      <div class="pillar" style="flex:1">
+      <div class="pillar">
         <div class="pillar-icon purple">
           <svg viewBox="0 0 28 28" fill="none"><rect x="3" y="7" width="22" height="14" rx="2" stroke="#8B5CF6" stroke-width="1.5"/><path d="M9 14h4m3 0h3" stroke="#8B5CF6" stroke-width="1.5" stroke-linecap="round"/></svg>
         </div>
-        <h3>Agents Pay via x402</h3>
-        <p>1. Call /dvm/:owner/:name<br>2. Receive HTTP 402<br>3. Sign USDT Jetton transfer<br>4. Gateway verifies on-chain<br>5. DVM executes</p>
+        <h3>Agents</h3>
+        <p>Sign automatically with Ed25519</p>
       </div>
     </div>
     <div class="narrative-card">
-      <p>Both paths settle in <strong>USDT on TON</strong>. Both are verifiable on-chain. The DVM owner earns regardless of who calls — human or machine.</p>
+      <p>Same flow, same USDT on TON. DVM owners earn <strong>regardless of who calls</strong> — human or machine.</p>
     </div>
   </div>
 </section>
