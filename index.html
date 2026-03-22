@@ -203,56 +203,92 @@
 </section>
 
 <!-- ============================================================ -->
-<!-- SLIDE 5: HOW IT WORKS — payment + ENS combined -->
+<!-- SLIDE 5: UNDER THE HOOD — protocol layer -->
 <!-- ============================================================ -->
 <section data-background-color="#0a0e1a">
   <div class="content-slide">
-    <span class="tag-pill purple">HOW IT WORKS</span>
-    <h2>x402 Payment + <span class="accent">ENS Identity</span></h2>
-    <div class="pillars" style="grid-template-columns: 1fr 1fr;">
-      <div class="pillar" style="text-align:left">
-        <h3 style="font-size:1.1em; color:#3390EC">Payment (x402 on TON)</h3>
-        <p style="font-size:0.8em; line-height:2.2">
-          1. Call a DVM → <strong>HTTP 402</strong><br>
-          2. User approves or agent signs<br>
-          3. USDT Jetton transfer on TON<br>
-          4. Gateway verifies → DVM executes<br>
-          5. Owner earns, caller gets data
-        </p>
+    <span class="tag-pill purple">UNDER THE HOOD</span>
+    <h2>How It <span class="accent">Works</span></h2>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-icon blue">
+          <svg viewBox="0 0 28 28" fill="none"><path d="M4 8h20M4 14h20M4 20h12" stroke="#3390EC" stroke-width="1.5" stroke-linecap="round"/><circle cx="22" cy="20" r="4" stroke="#3390EC" stroke-width="1.5"/><path d="M22 18v4" stroke="#3390EC" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>x402 on TON</h3>
+        <p>HTTP 402 → sign USDT Jetton → verify on-chain → execute</p>
       </div>
-      <div class="pillar" style="text-align:left">
-        <h3 style="font-size:1.1em; color:#8B5CF6">Identity (ENS on Sepolia)</h3>
-        <p style="font-size:0.8em; line-height:2.2">
-          Every DVM gets an on-chain name:<br>
-          <code style="color:#8B5CF6; font-family:'JetBrains Mono',monospace; font-size:0.85em">weather.uqa6ew1b.vendton.eth</code><br>
-          Text records: <strong>address.ton</strong> + description<br>
-          Agents discover DVMs by ENS name<br>
-          Identity on ETH · Payments on TON
-        </p>
+      <div class="pillar">
+        <div class="pillar-icon purple">
+          <svg viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="11" stroke="#8B5CF6" stroke-width="1.5"/><path d="M9 14h10M14 9v10" stroke="#8B5CF6" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>ENS on Sepolia</h3>
+        <p>Every DVM gets <code style="color:#8B5CF6;font-family:'JetBrains Mono',monospace;font-size:0.85em">name.owner.vendton.eth</code></p>
       </div>
+      <div class="pillar">
+        <div class="pillar-icon green">
+          <svg viewBox="0 0 28 28" fill="none"><rect x="4" y="4" width="20" height="20" rx="3" stroke="#10B981" stroke-width="1.5"/><path d="M8 10h12M8 14h8M8 18h10" stroke="#10B981" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Serverless DVMs</h3>
+        <p>JS code in vm sandbox, 10s timeout, fetch enabled</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon cyan">
+          <svg viewBox="0 0 28 28" fill="none"><path d="M14 4l8 4.6v10.8L14 24l-8-4.6V8.6L14 4z" stroke="#06B6D4" stroke-width="1.5" stroke-linejoin="round"/><path d="M14 4v20M6 8.6L14 14l8-5.4" stroke="#06B6D4" stroke-width="1" opacity="0.5"/></svg>
+        </div>
+        <h3>TON Connect</h3>
+        <p>Users approve payments from their own wallet</p>
+      </div>
+    </div>
+    <div class="narrative-card">
+      <p>Identity on <strong>Ethereum</strong> · Payments on <strong>TON</strong> · Interface on <strong>Telegram</strong></p>
     </div>
   </div>
 </section>
 
 <!-- ============================================================ -->
-<!-- SLIDE 6: WHAT WE BUILT — concrete differentiators -->
+<!-- SLIDE 6: WHAT WE BUILT — concrete features -->
 <!-- ============================================================ -->
 <section data-background-color="#0a0e1a">
   <div class="content-slide">
     <span class="tag-pill green">WHAT WE BUILT</span>
-    <h2>Beyond the <span class="accent">Protocol</span></h2>
-    <div class="status-grid" style="grid-template-columns:1fr 1fr; gap:1.2rem; margin-top:1.5rem">
-      <div class="status-item"><div class="s-check">✓</div><div class="s-text"><strong>DVM Marketplace</strong><span>Browse, search, filter paid APIs</span></div></div>
-      <div class="status-item"><div class="s-check">✓</div><div class="s-text"><strong>Serverless Execution</strong><span>JS code runs in vm sandbox, 10s timeout</span></div></div>
-      <div class="status-item"><div class="s-check">✓</div><div class="s-text"><strong>3 Deploy Modes</strong><span>Write code · Upload file · External URL</span></div></div>
-      <div class="status-item"><div class="s-check">✓</div><div class="s-text"><strong>User Wallet Payments</strong><span>TON Connect approval for every call</span></div></div>
-      <div class="status-item"><div class="s-check">✓</div><div class="s-text"><strong>ENS Subdomains</strong><span>Real on-chain identity per DVM on Sepolia</span></div></div>
-      <div class="status-item"><div class="s-check">✓</div><div class="s-text"><strong>AI Agent</strong><span>Discovers, chains, and pays for DVMs</span></div></div>
-      <div class="status-item"><div class="s-check">✓</div><div class="s-text"><strong>Profile & Earnings</strong><span>Track revenue, delete DVMs, revoke ENS</span></div></div>
-      <div class="status-item"><div class="s-check">✓</div><div class="s-text"><strong>Creation Fee</strong><span>0.05 TON per deploy — anti-spam</span></div></div>
-    </div>
-    <div class="narrative-card" style="margin-top:1.5rem">
-      <p>All real. All deployed. All verifiable on <strong>TON testnet</strong> and <strong>ENS Sepolia</strong>.</p>
+    <h2>The Full <span class="accent">Stack</span></h2>
+    <div class="pillars" style="grid-template-columns: 1fr 1fr;">
+      <div class="pillar" style="text-align:left">
+        <h3 style="font-size:1.1em; color:#3390EC">Platform</h3>
+        <p style="font-size:0.78em; line-height:2">
+          ✓ DVM marketplace with search and tags<br>
+          ✓ 3 deploy modes: code, file upload, URL<br>
+          ✓ 0.05 TON creation fee (anti-spam)<br>
+          ✓ Profile with earnings and DVM management
+        </p>
+      </div>
+      <div class="pillar" style="text-align:left">
+        <h3 style="font-size:1.1em; color:#8B5CF6">Protocol</h3>
+        <p style="font-size:0.78em; line-height:2">
+          ✓ x402 SDK: verify, settle, middleware<br>
+          ✓ Ed25519 signature verification<br>
+          ✓ USDT Jetton transfers (TEP-74)<br>
+          ✓ V5R1 wallet support
+        </p>
+      </div>
+      <div class="pillar" style="text-align:left">
+        <h3 style="font-size:1.1em; color:#10B981">Identity</h3>
+        <p style="font-size:0.78em; line-height:2">
+          ✓ ENS subdomains on Sepolia<br>
+          ✓ address.ton cross-chain records<br>
+          ✓ Auto-created on deploy<br>
+          ✓ Revoked on delete
+        </p>
+      </div>
+      <div class="pillar" style="text-align:left">
+        <h3 style="font-size:1.1em; color:#06B6D4">Intelligence</h3>
+        <p style="font-size:0.78em; line-height:2">
+          ✓ AI agent with 4 tools<br>
+          ✓ Auto-discovery and chaining<br>
+          ✓ User wallet payments via TON Connect<br>
+          ✓ Real-time SSE step streaming
+        </p>
+      </div>
     </div>
   </div>
 </section>
