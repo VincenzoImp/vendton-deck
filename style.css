@@ -93,7 +93,7 @@
 
 .cover-title { font-size: 4.5em !important; font-weight: 900 !important; margin: 0 0 6px !important; letter-spacing: -0.04em; }
 .cover-subtitle { font-size: 1.15em; color: var(--t2); margin: 0 0 30px; font-weight: 400; }
-.cover-tagline { display: flex; gap: 14px; margin-bottom: 40px; }
+.cover-tagline { display: flex; gap: 14px; margin-top: 28px; margin-bottom: 40px; }
 .tag-pill { font-size: 0.62em; font-weight: 600; padding: 8px 20px; border-radius: 20px; background: rgba(51,144,236,0.1); border: 1px solid rgba(51,144,236,0.2); color: var(--blue); }
 .tag-pill.purple { background: rgba(139,92,246,0.1); border-color: rgba(139,92,246,0.2); color: var(--purple); }
 .tag-pill.green { background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.2); color: var(--green); }
